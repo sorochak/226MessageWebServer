@@ -1,0 +1,5 @@
+# Message Server Constants
+
+KEYLENGTH = 8
+MAXMSGLENGTH = 160
+MINMSGLENGTH = 1
