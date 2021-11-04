@@ -18,7 +18,10 @@ import json
 
 def get_message(request,key):
     message = Message.objects.filter(key=key)
-    return HttpResponse("%(key)s: %(message)s" % { 'key':message[0].key, 'message':message[0].message})
+    if (len(msg) == 1):
+        return HttpResponse("%(key)s: %(message)s" % { 'key':message[0].key, 'message':message[0].message})
+    else:
+        return HttpResponse("")
 
 #
 # PURPOSE:
