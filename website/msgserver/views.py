@@ -13,13 +13,13 @@ import json
 # 'key' contains an alphanumeric key used to identify a message.
 #
 # RETURN/SIDE EFFECTS:
-# Returns a Web Response that contains a key and associated message.
+# Returns a Web Response that contains a message.
 #
 
 def get_message(request,key):
     message = Message.objects.filter(key=key)
     if (len(message) == 1):
-        return HttpResponse("%(key)s: %(message)s" % { 'key':message[0].key, 'message':message[0].message})
+        return HttpResponse("%(message)s" % { 'message':message[0].message})
     else:
         return HttpResponse("")
 
