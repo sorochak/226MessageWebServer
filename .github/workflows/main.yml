@@ -33,5 +33,5 @@ jobs:
       - name: Run the tests
         run: |
           pipenv install django
-	  echo 'DJANGO_SECRET_KEY=TESTING' > .env
+          echo 'DJANGO_SECRET_KEY=TESTING' > .env
           pipenv run website/manage.py test msgserver
