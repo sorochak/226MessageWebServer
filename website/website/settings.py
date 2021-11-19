@@ -140,4 +140,4 @@ if os.environ.get('DJANGO_SECRET_KEY') != 'TESTING':
 
 db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASES['default'].update(db_from_env)
-django_heroku.settings(locals())
+django_heroku.settings(locals(),test_runner=False)
